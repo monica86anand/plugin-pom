@@ -50,7 +50,7 @@
     <arguments> </arguments>
     <argLine>-Xms768M -Xmx768M -Djava.awt.headless=true -XX:+HeapDumpOnOutOfMemoryError -XX:+TieredCompilation -XX:TieredStopAtLevel=1</argLine>
 
-    <jenkins.version>2.204</jenkins.version>
+    <jenkins.version>2.289.1</jenkins.version>
     <jenkins-bom.version>${jenkins.version}</jenkins-bom.version>
 
     <jenkins-test-harness.version>1589.vc23fca066d5c</jenkins-test-harness.version>
@@ -306,7 +306,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.0.0-M3</version> <!-- TODO 3.0.0 when released -->
+          <version>3.0.0</version>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
@@ -478,11 +478,9 @@
                 <requireJavaVersion>
                   <version>[1.8.0,)</version>
                 </requireJavaVersion>
-                <!-- TODO failing during incrementals deploy: MENFORCER-281
                 <requirePluginVersions>
                   <banSnapshots>false</banSnapshots>
                 </requirePluginVersions>
-                -->
                 <enforceBytecodeVersion>
                   <maxJdkVersion>1.${java.level}</maxJdkVersion>
                   <ignoredScopes>
